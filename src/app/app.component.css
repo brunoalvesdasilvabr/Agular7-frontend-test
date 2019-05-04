@@ -1,0 +1,70 @@
+
+.container{
+    background-image: url('https://www.chimuadventures.com/blog/wp-content/uploads/2016/07/shutterstock_435627745-1024x580.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 95vh;
+    overflow-y: scroll;
+}
+.header-input-states{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#inputStates{
+    background-color: white;
+    border: 1px solid black;
+    width:400px;
+    height: 40px;
+    position:relative;
+}
+
+#inputStates input{
+   width:80%;
+   height: 80%;
+   border:none;
+   outline: none;
+}
+
+.btn{
+    position:absolute;
+    top:20%;
+    right:5%;
+    background-image: url('https://image.flaticon.com/icons/svg/149/149309.svg');
+    border:none;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+
+}
+
+.stateContainer{
+    background-color:white;
+    padding:30px;
+    margin:10px;
+    opacity:0.7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.stateContainer:hover{
+    box-shadow: 2px 4px 11px;
+    opacity: 1;
+  
+}
+
+.stateContainer .viewContent{
+    cursor: pointer;
+    background-color: blue;
+    padding:10px;
+    color:white;
+}
+.viewContent:active{
+    transform:translateY(2px)
+}
+
