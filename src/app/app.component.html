@@ -2,10 +2,34 @@
 <div class="container">
           <header class="header-input-states"><h1>Brazil States</h1>
                     <form id="inputStates">
-                        <input type="text" [(ngModel)]="searchItem" [ngModelOptions]="{standalone: true}">
+                        <input type="text" placeholder="Look for a state"  [(ngModel)]="searchItem" [ngModelOptions]="{standalone: true}">
                         <button  class="btn"></button>
                     </form>
           </header>
+            <div *ngFor='let state of filteredStates'>
+                      <div class="stateContainer">
+                              <div class="stateContent">
+                                  {{state.nome}}- {{state.sigla}}
+                              </div>
+                                <a (click)="triggerViewmore()" class="viewContent">View Content</a>
+                      </div>
+                      <div class="viewMore">
+                               <div (click)="fecharViewMore()" class="fecha">X</div>
+                                <div class="viewMore-name">
+                                    <label>Name:</label>
+                                    {{state.nome}}
+                                </div>
+                                <div class="viewMore-sigla">
+                                    <label>Sigla:</label>
+                                    {{state.sigla}}
+                                </div>
+                                <div class="viewMore-regiao">
+                                    <label>Região:</label>
+                                    {{state.regiao.nome}}
+                              </div>
+                    </div>
+
+            </div>
             <div *ngFor='let state of filteredStates'>
                       <div class="stateContainer">
                               <div class="stateContent">

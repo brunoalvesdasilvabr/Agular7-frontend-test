@@ -11,6 +11,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
+}
+.header-input-states h1{
+    animation: resizeReverse 1.5s ease-out 1;
 }
 
 #inputStates{
@@ -19,13 +23,43 @@
     width:400px;
     height: 40px;
     position:relative;
+    animation: resize 1.5s ease-out 1;
 }
 
+
 #inputStates input{
-   width:80%;
-   height: 80%;
+    width: 90%;
+    height: 92%;
    border:none;
    outline: none;
+  
+  
+}
+#inputStates input::placeholder{
+   padding-left:40%;
+   
+}
+
+#inputStates input:focus::placeholder{
+    padding-left: 0;
+}
+
+
+@keyframes resize{
+    0%{
+        transform: translateX(-300%);
+    }
+    100%{
+      transform:  translateX(0)
+    }
+}
+@keyframes resizeReverse{
+    0%{
+        transform: translateX(300%);
+    }
+    100%{
+      transform:  translateX(0)
+    }
 }
 
 .btn{

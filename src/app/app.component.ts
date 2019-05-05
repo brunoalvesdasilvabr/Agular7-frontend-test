@@ -1,6 +1,6 @@
 import { DataService } from './data.service';
 import { State } from './state.module';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 
 
@@ -30,18 +30,20 @@ export class AppComponent implements OnInit {
 constructor(private dataService: DataService){}
 
 ngOnInit(){
-   this.dataService.getStates()
-  .subscribe(data => this.states = data);
-this.filteredStates = this.states
+this.filteredStates = this.states;
+this.dataService.getStates().subscribe(data => this.states = data);
+
 }
 
-triggerViewmore(){
- document.querySelector('.viewMore').style.display = "block"
-}
 
-fecharViewMore(){
-  document.querySelector('.viewMore').style.display = "none";
-}
+// triggerViewmore(){
+
+//  console.log(this.vm.style.display = "block");
+// }
+
+//  fecharViewMore(){
+//   this.vm.style.display = "none";
+//  }
 }
 
 
