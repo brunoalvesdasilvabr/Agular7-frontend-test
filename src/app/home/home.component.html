@@ -11,10 +11,9 @@
                       <div class="stateContent">
                           {{state.nome}}- {{state.sigla}}
                       </div>
-                        <a (click)="triggerViewmore()" class="viewContent">View Content</a>
+                        <a (click)="showHide = !showHide" class="viewContent">View Content</a>
               </div>
-              <div class="viewMore">
-                       <div (click)="fecharViewMore()" class="fecha">X</div>
+              <div *ngIf = 'showHide' class="viewMore">
                         <div class="viewMore-name">
                             <label>Name:</label>
                             {{state.nome}}
@@ -27,32 +26,15 @@
                             <label>Região:</label>
                             {{state.regiao.nome}}
                       </div>
+                      <a (click)="showHidePopup = !showHidePopup" class="btnviewMore">View More</a>
             </div>
-
-    </div>
-    <div *ngFor='let state of filteredStates'>
-              <div class="stateContainer">
-                      <div class="stateContent">
-                          {{state.nome}}- {{state.sigla}}
-                      </div>
-                        <a (click)="triggerViewmore()" class="viewContent">View Content</a>
+              <div *ngIf = 'showHidePopup'  class="popup">
+                <h1>Warning</h1>
+                <p>{{message}}</p>
+                <div class="btnContainer">
+                 <a (click)="showHidePopup = !showHidePopup" class="btnYes">Yes</a> <a (click)="showHidePopup = !showHidePopup" class="btnNo">No</a>
+                </div>
               </div>
-              <div class="viewMore">
-                       <div (click)="fecharViewMore()" class="fecha">X</div>
-                        <div class="viewMore-name">
-                            <label>Name:</label>
-                            {{state.nome}}
-                        </div>
-                        <div class="viewMore-sigla">
-                            <label>Sigla:</label>
-                            {{state.sigla}}
-                        </div>
-                        <div class="viewMore-regiao">
-                            <label>Região:</label>
-                            {{state.regiao.nome}}
-                      </div>
-            </div>
 
     </div>
 </div>
-

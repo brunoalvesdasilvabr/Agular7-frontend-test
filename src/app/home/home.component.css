@@ -11,7 +11,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+
 }
 .header-input-states h1{
     animation: resizeReverse 1.5s ease-out 1;
@@ -33,12 +33,12 @@
     height: 92%;
    border:none;
    outline: none;
-  
-  
+
+
 }
 #inputStates input::placeholder{
    padding-left:40%;
-   
+
 }
 
 #inputStates input:focus::placeholder{
@@ -90,10 +90,10 @@
 .stateContainer:hover,.viewMore:hover{
     box-shadow: 2px 4px 11px;
     opacity: 1;
-  
+
 }
 
-.stateContainer .viewContent{
+.stateContainer .viewContent, .btnviewMore{
     cursor: pointer;
     background-color: blue;
     padding:10px;
@@ -113,15 +113,37 @@
     align-items: center;
     flex-direction: column;
     position: relative;
-    display: none;
 }
-
-.fecha{
-    position: absolute;
-    top:5%;
-    right: 2%;
-    cursor: pointer
+.popup{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  background-color: white;
+  border-radius: 20px;
+  position: absolute;
+  top:30%;
+  left:40%;
+  animation:popup .5s 1 forwards
 }
-
-
-
+@keyframes popup{
+0%{
+  transform: scale(0)
+}
+100%{
+  transform: scale(1)
+}
+}
+.btnContainer{
+  display:flex;
+  align-items: center;
+}
+.btnYes, .btnNo{
+  background-color:gray;
+  padding:5px 10px;
+  color:white;
+  margin:10px;
+}
+.btnYes:hover, .btnNo:hover{
+  background-color:blue;
+}

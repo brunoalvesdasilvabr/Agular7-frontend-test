@@ -9,6 +9,9 @@ import { DataService } from '../data.service';
 })
 export class HomeComponent implements OnInit {
   title = 'Brazil States';
+  showHide = false;
+  showHidePopup = false;
+  message ='Are you sure you want to proceed';
   states: State[];
   filteredStates:State[];
   private _searchItem:string;
@@ -24,7 +27,7 @@ export class HomeComponent implements OnInit {
     return this.states.filter(State => State.nome.toLowerCase().indexOf(searchItem.toLowerCase()) !== -1)
   }
 
-  
+
 
 constructor(private dataService: DataService){}
 
