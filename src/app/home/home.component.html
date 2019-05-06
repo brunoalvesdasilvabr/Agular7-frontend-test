@@ -11,20 +11,20 @@
                       <div class="stateContent">
                           {{state.nome}}- {{state.sigla}}
                       </div>
-                        <a (click)="showHide = !showHide" class="viewContent">View Content</a>
+                      <a (click)="showHide = !showHide" class="viewContent">View Content</a>
               </div>
-              <div *ngIf = 'showHide' class="viewMore">
+              <div  *ngIf = 'showHide' class="viewMore">
                         <div class="viewMore-name">
                             <label>Name:</label>
-                            {{state.nome}}
+                               {{state.nome}}
                         </div>
                         <div class="viewMore-sigla">
                             <label>Sigla:</label>
-                            {{state.sigla}}
+                              {{state.sigla}}
                         </div>
                         <div class="viewMore-regiao">
                             <label>Região:</label>
-                            {{state.regiao.nome}}
+                           {{state.regiao.nome}}
                       </div>
                       <a (click)="showHidePopup = !showHidePopup" class="btnviewMore">View More</a>
             </div>

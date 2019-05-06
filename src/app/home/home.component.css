@@ -155,3 +155,9 @@
 .btnYes:hover, .btnNo:hover{
   background-color:blue;
 }
+
+@media screen and (max-width:600px){
+  .popup{
+    left:10%
+  }
+}
