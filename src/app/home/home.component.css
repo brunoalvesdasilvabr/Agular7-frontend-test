@@ -124,7 +124,8 @@
   position: absolute;
   top:30%;
   left:40%;
-  animation:popup .5s 1 forwards
+  animation:popup .5s 1 forwards;
+
 }
 @keyframes popup{
 0%{
@@ -143,6 +144,7 @@
   padding:5px 10px;
   color:white;
   margin:10px;
+  cursor: pointer;
 }
 .btnYes:hover, .btnNo:hover{
   background-color:blue;
